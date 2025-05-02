@@ -23,31 +23,3 @@ Neste projeto teremos um backend em Java com Spring Boot e um frontend em React,
     *   React
     *   JavaScript
     *   Vite
-
-## Configuração do `application.properties`
-
-O arquivo `application.properties` é responsável pelas configurações do backend Spring Boot.
-
-Abaixo está um exemplo básico para rodar o projeto localmente com banco de dados H2 em memória:
-
-```properties
-# Porta do servidor
-server.port=8080
-
-# Configuração do banco de dados H2 (em memória)
-spring.datasource.url=jdbc:h2:mem:produtosdb
-spring.datasource.driverClassName=org.h2.Driver
-spring.datasource.username=sa
-spring.datasource.password=
-
-# Configurações do JPA/Hibernate
-spring.jpa.hibernate.ddl-auto=update
-spring.jpa.show-sql=true
-spring.jpa.database-platform=org.hibernate.dialect.H2Dialect
-
-# Habilita o console web do H2
-spring.h2.console.enabled=true
-
-## Licença
-
-Código livre pra usar, modificar e compartilhar.
