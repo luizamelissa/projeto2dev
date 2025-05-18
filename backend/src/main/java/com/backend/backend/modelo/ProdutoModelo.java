@@ -9,9 +9,9 @@ import lombok.Getter;
 import lombok.Setter;
 
 @Entity
+@Table(name = "tb_produtos")
 @Getter
 @Setter
-@Table(name = "produtos")
 public class ProdutoModelo {
 
     @Id
