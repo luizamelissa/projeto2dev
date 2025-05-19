@@ -15,8 +15,7 @@ public class ProdutoServico{
     @Autowired
     private ProdutoRepositorio pr;
 
-    @Autowired
-    ProdutoModelo pm;
+    
 
     @Autowired
     RespostaModelo rm;
@@ -25,7 +24,7 @@ public class ProdutoServico{
         return pr.findAll();
     }
 
-    public ResponseEntity<?> cadastrar(){
+    public ResponseEntity<?> cadastrar(ProdutoModelo pm){
         if (pm.getNome().equals("")) {
             rm.setMensagem("O nome do produto é obrigatório");
             return new ResponseEntity<RespostaModelo>(rm, HttpStatus.BAD_REQUEST);
